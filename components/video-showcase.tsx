@@ -96,12 +96,15 @@ export function VideoShowcase({
                         </button>
 
                         <video
+                            ref={videoRef}
                             src={videoUrl}
                             className="w-full h-full object-contain"
                             loop
                             autoPlay
                             playsInline
                             onClick={togglePlay}
+                            onPlay={() => setIsPlaying(true)}
+                            onPause={() => setIsPlaying(false)}
                         />
 
                         <div className="absolute bottom-10 left-6 right-20 text-white space-y-2 pointer-events-none">
@@ -154,6 +157,7 @@ export function VideoShowcase({
                     <div className="relative aspect-[9/19] bg-gray-900 rounded-[2rem] p-1.5 shadow-2xl border-4 border-gray-800 overflow-hidden">
                         <div className="relative w-full h-full rounded-[1.6rem] overflow-hidden bg-black">
                             <video
+                                ref={videoRef}
                                 src={videoUrl}
                                 poster={posterUrl}
                                 className="w-full h-full object-cover cursor-pointer"
@@ -162,6 +166,8 @@ export function VideoShowcase({
                                 playsInline
                                 autoPlay
                                 onClick={togglePlay}
+                                onPlay={() => setIsPlaying(true)}
+                                onPause={() => setIsPlaying(false)}
                             />
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors pointer-events-none" />
 
