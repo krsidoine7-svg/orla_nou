@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/hooks/use-language"
 import { Hero } from "@/components/hero"
+import { VideoShowcase } from "@/components/video-showcase"
 import { Services } from "@/components/services"
 import { About } from "@/components/about"
 import { Portfolio } from "@/components/portfolio"
@@ -43,6 +44,7 @@ export default function HomePage() {
       <main className="relative overflow-hidden">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
           <Hero />
+
           <Services />
           <About />
           <Portfolio />
@@ -55,6 +57,11 @@ export default function HomePage() {
 
       </main>
 
+      <VideoShowcase
+        videoUrl="/automation-demo.mp4"
+        tiktokUrl="https://www.tiktok.com/@chris_co_"
+        title={language === "fr" ? "L'Automatisation en action" : "Automation in Action"}
+      />
       <VirtualAssistant />
       <WhatsAppButton />
     </div>
