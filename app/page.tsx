@@ -59,7 +59,7 @@ export default function HomePage() {
 
       <VideoShowcase
         videoUrl="/automation-demo.mp4"
-        tiktokUrl="https://www.tiktok.com/@chris_co_"
+        tiktokUrl="https://www.tiktok.com/@renaud.koffi.0"
         title={language === "fr" ? "L'Automatisation en action" : "Automation in Action"}
       />
       <VirtualAssistant />
