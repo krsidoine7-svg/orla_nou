@@ -159,33 +159,6 @@ export function FAQ() {
           ))}
         </div>
 
-        {/* Contact CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-3xl p-8 lg:p-12">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-              {language === "fr" ? "Vous avez d'autres questions ?" : "Do you have other questions?"}
-            </h3>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              {language === "fr"
-                ? "Notre équipe est là pour répondre à toutes vos questions sur l'automatisation. N'hésitez pas à nous contacter !"
-                : "Our team is here to answer all your automation questions. Don't hesitate to contact us!"}
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              {language === "fr" ? "Contactez-nous" : "Contact us"}
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

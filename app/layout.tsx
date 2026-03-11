@@ -10,34 +10,34 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Chris&co - Automatisation pour PME | Abidjan, Côte d'Ivoire",
+  title: "Orlan-ou - Automatisation pour PME | Abidjan, Côte d'Ivoire",
   description:
     "Spécialiste en automatisation de tâches répétitives pour PME et indépendants. Facturation automatisée, CRM, notifications, réseaux sociaux. Basé à Abidjan.",
   keywords:
     "automatisation, digital, AI, chatbot, gain de temps, tâches, AI agent, AIAA, agence d'automatisation, WhatsApp, Abidjan, Côte d'Ivoire, PME",
   authors: [{ name: "Toto", url: "https://chrisandco.ci" }],
-  creator: "Chris&co",
-  publisher: "Chris&co",
+  creator: "Orlan-ou",
+  publisher: "Orlan-ou",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://chrisandco.ci",
-    siteName: "Chris&co",
-    title: "Chris&co - Automatisation pour PME | Abidjan",
+    siteName: "Orlan-ou",
+    title: "Orlan-ou - Automatisation pour PME | Abidjan",
     description: "Simplifiez vos échanges, augmentez vos gains avec nos solutions d'automatisation sur mesure.",
     images: [
       {
         url: "/placeholder.svg?height=630&width=1200&co+automation+company+Abidjan=",
         width: 1200,
         height: 630,
-        alt: "Chris&co - Automatisation Abidjan",
+        alt: "Orlan-ou - Automatisation Abidjan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris&co - Automatisation pour PME",
+    title: "Orlan-ou - Automatisation pour PME",
     description: "Simplifiez vos échanges, augmentez vos gains",
     images: ["/placeholder.svg?height=630&width=1200&co+automation="],
   },

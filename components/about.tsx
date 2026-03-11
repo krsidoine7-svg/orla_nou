@@ -1,8 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Users, Target, Lightbulb, Award, MapPin } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Users, Target, Rocket, Sparkles, HeartHandshake, TrendingUp } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 
 export function About() {
@@ -10,174 +9,158 @@ export function About() {
 
   const content = {
     fr: {
-      title: "À propos de Chris&co",
-      subtitle: "Une équipe passionnée d'automatisation basée à Abidjan",
-      founder: {
-        name: "Koffi Renaud",
-        role: "Fondateur & Expert en Automatisation",
-        description:
-          "Passionné par l'innovation technologique, Renaud a créé Chris&co pour aider les entreprises africaines à optimiser leurs processus grâce à l'automatisation intelligente.",
-      },
-      stats: [
-        { icon: Users, value: "20+", label: "Clients satisfaits" },
-        { icon: Target, value: "30+", label: "Projets réalisés" },
-        { icon: Award, value: "2025", label: "Depuis" },
-        { icon: MapPin, value: "Abidjan", label: "Côte d'Ivoire" },
-      ],
+      badge: "NOTRE ADN",
+      title: "À propos d'Orlan-ou",
+      subtitle: "Plus qu'une agence, votre partenaire stratégique en automatisation basé à Abidjan.",
       values: [
         {
-          icon: Lightbulb,
+          icon: Rocket,
           title: "Innovation",
-          description:
-            "Nous utilisons les dernières technologies pour créer des solutions d'automatisation révolutionnaires.",
+          description: "Nous ne nous contentons pas de suivre les tendances. Nous intégrons les dernières avancées en IA et les outils No-Code les plus puissants pour construire des systèmes fiables et évolutifs.",
+          color: "from-purple-500 to-pink-500",
+          shadow: "shadow-purple-500/20"
         },
         {
-          icon: Users,
+          icon: HeartHandshake,
           title: "Proximité",
-          description:
-            "Une approche personnalisée pour comprendre et répondre aux besoins spécifiques de chaque client.",
+          description: "Chaque entreprise est unique. Nous prenons le temps d'auditer vos processus en profondeur et restons à vos côtés à chaque étape, avec un accompagnement humain sur mesure.",
+          color: "from-blue-500 to-cyan-400",
+          shadow: "shadow-blue-500/20"
         },
         {
-          icon: Target,
+          icon: TrendingUp,
           title: "Résultats",
-          description: "Notre objectif : maximiser votre productivité et votre rentabilité grâce à l'automatisation.",
+          description: "Nous ne vendons pas de la technique, mais du temps et de la croissance. Nos solutions sont conçues dans un seul but : maximiser votre rentabilité et éliminer les tâches chronophages.",
+          color: "from-orange-500 to-yellow-500",
+          shadow: "shadow-orange-500/20"
         },
       ],
-      mission:
-        "Notre mission est de démocratiser l'automatisation en Afrique et d'aider les entreprises à se concentrer sur leur cœur de métier.",
+      missionTitle: "Notre Mission : Démocratiser l'automatisation en Afrique",
+      missionText: "Notre mission est simple : permettre aux entreprises de se recentrer sur leur cœur de métier. Nous construisons l'infrastructure invisible qui fait tourner votre activité 24h/24, sans erreur, pour libérer votre plein potentiel."
     },
     en: {
-      title: "About Chris&co",
-      subtitle: "A passionate automation team based in Abidjan",
-      founder: {
-        name: "Koffi Renaud",
-        role: "Founder & Automation Expert",
-        description:
-          "Passionate about technological innovation, Toto created Chris&co to help African businesses optimize their processes through intelligent automation.",
-      },
-      stats: [
-        { icon: Users, value: "20+", label: "Satisfied clients" },
-        { icon: Target, value: "30+", label: "Projects completed" },
-        { icon: Award, value: "2025", label: "Since" },
-        { icon: MapPin, value: "Abidjan", label: "Côte d'Ivoire" },
-      ],
+      badge: "OUR DNA",
+      title: "About Orlan-ou",
+      subtitle: "More than an agency, your strategic automation partner based in Abidjan.",
       values: [
         {
-          icon: Lightbulb,
+          icon: Rocket,
           title: "Innovation",
-          description: "We use the latest technologies to create revolutionary automation solutions.",
+          description: "We don't just follow trends. We integrate the latest AI advancements and the most powerful No-Code tools to build reliable and scalable systems.",
+          color: "from-purple-500 to-pink-500",
+          shadow: "shadow-purple-500/20"
         },
         {
-          icon: Users,
+          icon: HeartHandshake,
           title: "Proximity",
-          description: "A personalized approach to understand and meet the specific needs of each client.",
+          description: "Every business is unique. We take the time to audit your processes in depth and stay by your side at every step, offering human and tailored support.",
+          color: "from-blue-500 to-cyan-400",
+          shadow: "shadow-blue-500/20"
         },
         {
-          icon: Target,
+          icon: TrendingUp,
           title: "Results",
-          description: "Our goal: maximize your productivity and profitability through automation.",
+          description: "We don't sell tech, we sell time and growth. Our solutions are designed with one goal: maximizing your profitability and eliminating time-consuming tasks.",
+          color: "from-orange-500 to-yellow-500",
+          shadow: "shadow-orange-500/20"
         },
       ],
-      mission: "Our mission is to democratize automation in Africa and help businesses focus on their core business.",
+      missionTitle: "Our Mission: Democratizing automation in Africa",
+      missionText: "Our mission is simple: allow businesses to refocus on their core value. We build the invisible infrastructure that runs your operations 24/7, error-free, unleashing your full potential."
     },
   }
 
   const t = content[language]
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-      <div className="container mx-auto px-4">
-        {/* Header */}
+    <section id="about" className="py-24 relative overflow-hidden bg-white">
+      {/* Dynamic Background */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-100 rounded-full blur-[100px] opacity-60 pointer-events-none" />
+      <div className="absolute top-1/2 -left-40 w-96 h-96 bg-pink-100 rounded-full blur-[100px] opacity-60 pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10 w-full max-w-7xl">
+
+        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              {t.title}
-            </span>
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 border border-purple-100 mb-6 font-bold text-purple-700 text-xs tracking-widest uppercase">
+            <Sparkles className="w-3.5 h-3.5" />
+            {t.badge}
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-gray-900 tracking-tight">
+            {t.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.subtitle}</p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            {t.subtitle}
+          </p>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
-        >
-          {t.stats.map((stat, index) => (
-            <motion.div key={index} whileHover={{ scale: 1.05 }} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-white" />
+        {/* 3 Values Grid */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-24">
+          {t.values.map((value, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="h-full bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden z-10">
+                {/* Subtle gradient overlay on hover */}
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${value.color} opacity-0 group-hover:opacity-5 rounded-full blur-2xl transition-opacity duration-500`} />
+
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} p-0.5 mb-8 shadow-lg ${value.shadow} group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-gray-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-br group-hover:from-gray-900 group-hover:to-gray-600 transition-all" />
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
               </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Founder Section */}
+        {/* Big Mission Statement Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg mb-16"
+          className="relative rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl shadow-purple-100/30"
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6">
-                <span className="text-4xl font-bold text-white">T</span>
-              </div>
+          {/* Mission Background (Light/Premium) */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-pink-50/50 to-purple-50/50 z-0" />
+
+          {/* Colorful glowing orbs inside the mission box */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-200/50 rounded-full blur-[100px] z-0 pointer-events-none mix-blend-multiply" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-200/50 rounded-full blur-[100px] z-0 pointer-events-none mix-blend-multiply" />
+
+          <div className="relative z-10 p-10 sm:p-16 lg:p-24 text-center flex flex-col items-center justify-center">
+            <div className="w-20 h-20 bg-white border border-purple-100 rounded-full flex items-center justify-center mb-8 shadow-lg shadow-purple-100/50">
+              <Target className="w-10 h-10 text-purple-600" />
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">{t.founder.name}</h3>
-              <p className="text-purple-600 font-medium mb-4">{t.founder.role}</p>
-              <p className="text-gray-600 leading-relaxed">{t.founder.description}</p>
-            </div>
+
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight max-w-4xl mx-auto tracking-tight">
+              {t.missionTitle}
+            </h3>
+
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-normal">
+              "{t.missionText}"
+            </p>
           </div>
         </motion.div>
 
-        {/* Values */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 mb-16"
-        >
-          {t.values.map((value, index) => (
-            <motion.div key={index} whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Mission */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-3xl p-8 lg:p-12"
-        >
-          <h3 className="text-2xl lg:text-3xl font-bold mb-4">Notre Mission</h3>
-          <p className="text-lg lg:text-xl opacity-90 max-w-4xl mx-auto leading-relaxed">{t.mission}</p>
-        </motion.div>
       </div>
     </section>
   )

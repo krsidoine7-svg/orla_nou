@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Facebook, MessageCircle, Linkedin, Instagram, ArrowUp } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, MessageCircle, Linkedin, ArrowUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
 
@@ -11,7 +11,7 @@ export function Footer() {
   const content = {
     fr: {
       company: {
-        title: "Chris&co",
+        title: "Orlan-ou",
         description:
           "Spécialiste en automatisation pour PME et indépendants. Basés à Abidjan, nous transformons vos processus métier grâce à l'IA et l'automatisation.",
         slogan: "Simplifiez vos échanges, augmentez vos gains",
@@ -38,7 +38,7 @@ export function Footer() {
       contact: {
         title: "Contact",
         address: "Abidjan, Côte d'Ivoire",
-        phone: "+225 0799138777",
+        phone: "+225 0503681588",
         email: "Krsidoine7@gmail.com",
       },
       legal: {
@@ -55,12 +55,12 @@ export function Footer() {
         placeholder: "Votre email",
         button: "S'abonner",
       },
-      copyright: "© 2024 Chris&co. Tous droits réservés.",
+      copyright: "© 2024 Orlan-ou. Tous droits réservés.",
       backToTop: "Retour en haut",
     },
     en: {
       company: {
-        title: "Chris&co",
+        title: "Orlan-ou",
         description:
           "Automation specialist for SMEs and freelancers. Based in Abidjan, we transform your business processes through AI and automation.",
         slogan: "Simplify your exchanges, increase your gains",
@@ -87,7 +87,7 @@ export function Footer() {
       contact: {
         title: "Contact",
         address: "Abidjan, Côte d'Ivoire",
-        phone: "+225 0799138777",
+        phone: "+225 0503681588",
         email: "Krsidoine7@gmail.com",
       },
       legal: {
@@ -104,7 +104,7 @@ export function Footer() {
         placeholder: "Your email",
         button: "Subscribe",
       },
-      copyright: "© 2024 Chris&co. All rights reserved.",
+      copyright: "© 2024 Orlan-ou. All rights reserved.",
       backToTop: "Back to top",
     },
   }
@@ -128,10 +128,11 @@ export function Footer() {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C&C</span>
-              </div>
-              <h3 className="text-2xl font-bold">{t.company.title}</h3>
+              <img
+                src="/automatisation%20image/Fichier%204Orlanou.webp"
+                alt="Orlan-ou Logo"
+                className="h-7 md:h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">{t.company.description}</p>
             <p className="text-pink-400 font-medium italic">"{t.company.slogan}"</p>
@@ -202,9 +203,8 @@ export function Footer() {
               <div className="flex space-x-3">
                 {[
                   { icon: Facebook, href: "https://www.facebook.com/share/19WxB2S3BD/" },
-                  { icon: MessageCircle, href: "https://wa.me/2250799138777" },
+                  { icon: MessageCircle, href: "https://wa.me/2250503681588?text=Bonjour%20Orlan-ou,%20je%20vous%20contacte%20depuis%20votre%20site%20web." },
                   { icon: Linkedin, href: "https://www.linkedin.com/company/chris-co/?viewAsMember=true" },
-                  { icon: Instagram, href: "https://www.instagram.com/chris.co0/" },
                 ].map((social, index) => (
                   <motion.a
                     key={index}

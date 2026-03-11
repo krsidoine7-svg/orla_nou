@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/hooks/use-language"
 import { Hero } from "@/components/hero"
+import { LogoTicker } from "@/components/logo-ticker"
 import { VideoShowcase } from "@/components/video-showcase"
 import { Services } from "@/components/services"
+import { OtherServices } from "@/components/other-services"
 import { About } from "@/components/about"
 import { Portfolio } from "@/components/portfolio"
 import { Blog } from "@/components/blog"
@@ -15,13 +17,13 @@ import { VirtualAssistant } from "@/components/virtual-assistant"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { FloatingElements } from "@/components/floating-elements"
 // pour compter les visiteur du site
-import VisitorCounter from "@/components/VisitorCounter"
+// import VisitorCounter from "@/components/VisitorCounter"
 
 // reactbits Curseur Splash
 import SplashCursor from "@/components/SplashCursor"
-
-
-
+import { Process } from "@/components/process"
+import { LeadMagnet } from "@/components/lead-magnet"
+import { Support } from "@/components/support"
 
 
 export default function HomePage() {
@@ -44,16 +46,21 @@ export default function HomePage() {
       <main className="relative overflow-hidden">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
           <Hero />
+          <LogoTicker />
 
           <Services />
+          <OtherServices />
+          <Process />
+          <Support />
           <About />
           <Portfolio />
+          <LeadMagnet />
           <Blog />
           <Contact />
           <FAQ />
         </motion.div>
         {/* 👇  AJOUTÉ ICI */}
-        <VisitorCounter />
+        {/* <VisitorCounter /> */}
 
       </main>
 

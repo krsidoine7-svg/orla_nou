@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Calendar, User, ArrowRight, Clock } from "lucide-react"
+import { Calendar, User, ArrowRight, Clock, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -40,7 +40,7 @@ export function Blog() {
             L'automatisation traditionnelle (RPA) fonctionnait sur des règles strictes. Si une donnée manquait, le processus s'arrêtait. Aujourd'hui, l'IA agit comme une "glue" intelligente. Elle est capable de combler les lacunes, de corriger des erreurs de saisie et de comprendre l'intention derrière un message client. Par exemple, au lieu de rejeter un formulaire mal rempli, l'IA peut déduire l'information manquante à partir des documents attachés.
 
             ### 2. L'IA Générative : Votre nouveau collaborateur
-            L'IA ne se contente plus de traiter des données ; elle crée. Dans le cadre de l'automatisation marketing, cela permet de générer des réponses ultra-personnalisées qui ne ressemblent pas à des messages de bots. Chez Chris&co, nous intégrons ces modèles pour que vos communications WhatsApp et Email conservent une chaleur humaine tout en étant déclenchées automatiquement.
+            L'IA ne se contente plus de traiter des données ; elle crée. Dans le cadre de l'automatisation marketing, cela permet de générer des réponses ultra-personnalisées qui ne ressemblent pas à des messages de bots. Chez Orlan-ou, nous intégrons ces modèles pour que vos communications WhatsApp et Email conservent une chaleur humaine tout en étant déclenchées automatiquement.
 
             ### 3. Impact sur la Croissance et le Chiffre d'Affaire
             Le gain de temps (environ 15 à 20 heures par semaine pour un responsable PME) n'est que la partie visible de l'iceberg. Le vrai bénéfice réside dans la **réduction du coût d'opportunité**. Chaque heure passée à trier des factures est une heure de moins passée à prospecter ou à innover. L'automatisation intelligente permet de multiplier votre capacité de traitement par 5 sans augmenter votre masse salariale.
@@ -55,7 +55,6 @@ export function Blog() {
           date: "15 Mars 2024",
           readTime: 12,
           category: "IA & Technologie",
-          featured: true,
         },
         {
           id: "10-tasks",
@@ -115,7 +114,7 @@ export function Blog() {
             Le saviez-vous ? En Afrique, WhatsApp est devenu le véritable système d'exploitation du commerce. L'époque où l'on répondait manuellement à chaque "C'est combien ?" est révolue. Voici comment passer à l'étape supérieure.
 
             ### 1. Pourquoi l'API WhatsApp est indispensable
-            L'application "Business" standard a ses limites : un seul utilisateur à la fois, pas d'intégration possible, et des risques de bannissement en cas d'envois groupés. L'API (proposée via Chris&co) permet :
+            L'application "Business" standard a ses limites : un seul utilisateur à la fois, pas d'intégration possible, et des risques de bannissement en cas d'envois groupés. L'API (proposée via Orlan-ou) permet :
             - De connecter votre WhatsApp à votre CRM (Notion, HubSpot).
             - D'avoir plusieurs agents qui répondent sur le même numéro.
             - D'automatiser des flux de vente complets.
@@ -142,7 +141,7 @@ export function Blog() {
             L'automatisation WhatsApp n'est plus une option pour qui veut dominer le marché local. C'est le canal le plus direct, le plus intime et le plus efficace pour transformer un prospect en client fidèle.
           `,
           image: "/blog/whatsapp.png",
-          author: "N'Guéssan Chris",
+          author: "Koffi Renaud",
           date: "1 Mars 2024",
           readTime: 14,
           category: "Tutoriels",
@@ -169,7 +168,7 @@ export function Blog() {
             Before, a software robot could only do what it was precisely told: "If A then B". Today, thanks to AI, our automations can analyze, understand, and decide. For example, instead of simply sorting emails, AI can read the content of a client message, understand the urgency, and propose an appropriate response before submitting it for your validation.
 
             ### 2. CRM and Client Management: The heart of the revolution
-            Gone are the days when you had to manually note every lead coming from WhatsApp or Instagram. With the solutions we develop at Chris&co, AI captures information, qualifies the prospect according to their budget or need, and inserts it directly into your CRM (like Notion or HubSpot). This allows Ivorian entrepreneurs to focus on sales rather than data entry.
+            Gone are the days when you had to manually note every lead coming from WhatsApp or Instagram. With the solutions we develop at Orlan-ou, AI captures information, qualifies the prospect according to their budget or need, and inserts it directly into your CRM (like Notion or HubSpot). This allows Ivorian entrepreneurs to focus on sales rather than data entry.
 
             ### 3. Why take the step now?
             Ivory Coast is experiencing lightning-fast digitalization. Companies that use AI to automate their invoices, appointment reminders, or inventory management save an average of 15 hours of work per week. 
@@ -181,7 +180,6 @@ export function Blog() {
           date: "March 15, 2024",
           readTime: 5,
           category: "AI & Technology",
-          featured: true,
         },
         {
           id: "10-tasks",
@@ -198,7 +196,7 @@ export function Blog() {
           title: "WhatsApp Automation: Complete 2024 Guide",
           excerpt: "Learn how to automate your WhatsApp Business communications to improve your customer service.",
           image: "/blog/whatsapp.png",
-          author: "N'Guéssan Chris",
+          author: "Koffi Renaud",
           date: "March 1, 2024",
           readTime: 6,
           category: "Tutorials",
@@ -210,156 +208,114 @@ export function Blog() {
   const t = content[language]
 
   return (
-    <section id="blog" className="py-20 bg-gradient-to-br from-orange-50 to-pink-50">
-      <div className="container mx-auto px-4">
+    <section id="blog" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Decorative patterns */}
+      <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-50">
+        <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-orange-200/40 rounded-full blur-[100px] mix-blend-multiply" />
+        <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-pink-200/40 rounded-full blur-[100px] mix-blend-multiply" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
-              {t.title}
-            </span>
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-orange-100 border border-orange-200 mb-6 font-semibold text-orange-700 text-sm tracking-wide">
+            NOS ARTICLES
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-black mb-6 text-gray-900 tracking-tight">
+            {t.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.subtitle}</p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            {t.subtitle}
+          </p>
         </motion.div>
 
-        {/* Featured Post */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          {t.posts
-            .filter((post) => post.featured)
-            .map((post, index) => (
+        {/* 3-Column Grid for ALL POSTS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {t.posts.map((post, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
+              className="group h-full"
+            >
               <Card
-                key={index}
-                className="overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-white"
+                className="h-full border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden bg-white flex flex-col cursor-pointer"
+                onClick={() => setSelectedPost(post)}
               >
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={post.image || "/placeholder.svg"}
-                      alt={post.title}
-                      className="w-full h-64 lg:h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-orange-500 hover:bg-orange-600 text-white">Featured</Badge>
-                    </div>
-                  </div>
-                  <CardContent className="p-8 lg:p-12 flex flex-col justify-center">
-                    <Badge variant="secondary" className="w-fit mb-4 bg-orange-100 text-orange-700">
+                {/* Image Section */}
+                <div className="relative overflow-hidden h-56 shrink-0 border-b border-gray-100">
+                  <div className="absolute inset-0 bg-gray-100 animate-pulse" /> {/* Show while loading */}
+                  <img
+                    src={post.image || "/placeholder.svg"}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out relative z-10"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+
+                  {/* Category Badge Floating on Image */}
+                  <div className="absolute top-4 left-4 z-30">
+                    <Badge className="bg-white/95 text-orange-600 hover:bg-white font-bold px-3 py-1 shadow-sm backdrop-blur-sm border-0">
                       {post.category}
                     </Badge>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 hover:text-orange-600 transition-colors cursor-pointer" onClick={() => setSelectedPost(post)}>
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed text-lg">{post.excerpt}</p>
-                    <div className="flex items-center justify-between mb-6 text-sm text-gray-500">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center space-x-1">
-                          <User className="w-4 h-4" />
-                          <span>
-                            {t.author} {post.author}
-                          </span>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <CardContent className="p-8 flex flex-col flex-grow relative bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors line-clamp-2 leading-tight">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3 text-sm flex-grow">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="mt-auto">
+                    {/* Meta Info */}
+                    <div className="flex flex-col gap-3 pt-6 border-t border-gray-100 text-sm text-gray-500 mb-6">
+                      <div className="flex items-center gap-2">
+                        <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                          <User className="w-3.5 h-3.5 text-orange-600" />
                         </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
+                        <span className="font-medium text-gray-700">
+                          {post.author}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between text-xs">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
                           <span>{post.date}</span>
                         </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-3.5 h-3.5" />
                           <span>
                             {post.readTime} {t.readTime}
                           </span>
                         </div>
                       </div>
                     </div>
-                    <Button
-                      className="bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 text-white group w-fit"
-                      onClick={() => setSelectedPost(post)}
-                    >
-                      {t.readMore}
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </CardContent>
-                </div>
-              </Card>
-            ))}
-        </motion.div>
 
-        {/* Regular Posts */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {t.posts
-            .filter((post) => !post.featured)
-            .map((post, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: (index + 1) * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="group"
-              >
-                <Card className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={post.image || "/placeholder.svg"}
-                      alt={post.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="secondary" className="bg-white/90 text-gray-700">
-                        {post.category}
-                      </Badge>
+                    {/* Read More Link */}
+                    <div className="flex items-center text-orange-600 font-bold text-sm uppercase tracking-wider group-hover:text-orange-700 relative">
+                      {t.readMore}
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors cursor-pointer line-clamp-2" onClick={() => setSelectedPost(post)}>
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">{post.excerpt}</p>
-                    <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <User className="w-4 h-4" />
-                        <span>
-                          {t.author} {post.author}
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>
-                          {post.readTime} {t.readTime}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.date}</span>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-orange-600 hover:text-orange-700 hover:bg-orange-50 group"
-                        onClick={() => setSelectedPost(post)}
-                      >
-                        {t.readMore}
-                        <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
 
-        {/* CTA */}
+        {/* Global CTA button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -369,97 +325,117 @@ export function Blog() {
         >
           <Button
             size="lg"
-            variant="outline"
-            className="border-2 border-orange-200 hover:border-orange-300 text-orange-700 hover:bg-orange-50 px-8 py-4 rounded-full transition-all duration-300 group bg-transparent"
+            className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 px-8 py-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 group font-bold"
           >
             {t.viewAllPosts}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 text-orange-500 transition-transform" />
           </Button>
         </motion.div>
       </div>
 
-      {/* Article Dialog */}
+      {/* Article Dialog Pop-up */}
       <Dialog open={!!selectedPost} onOpenChange={() => setSelectedPost(null)}>
-        <DialogContent className="w-[95vw] sm:max-w-3xl max-h-[90vh] overflow-y-auto bg-white">
-          <DialogHeader>
-            <div className="flex items-center space-x-2 mb-4">
-              <Badge className="bg-orange-500 text-white">{selectedPost?.category}</Badge>
-              <span className="text-sm text-gray-500">{selectedPost?.date}</span>
-            </div>
-            <DialogTitle className="text-xl sm:text-3xl font-bold text-gray-900 mb-4">{selectedPost?.title}</DialogTitle>
-            <DialogDescription className="text-lg text-gray-600 font-medium italic mb-6">
-              {selectedPost?.excerpt}
-            </DialogDescription>
-          </DialogHeader>
+        <DialogContent className="w-[95vw] sm:max-w-4xl max-h-[90vh] overflow-y-auto bg-white p-0 rounded-3xl border-0 shadow-2xl">
 
-          <div className="relative w-full h-64 mb-8 overflow-hidden rounded-xl">
+          {/* Header Image Full Width */}
+          <div className="relative w-full h-80 bg-gray-100">
             <img
               src={selectedPost?.image || "/placeholder.svg"}
               alt={selectedPost?.title}
               className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent" />
+
+            <div className="absolute bottom-0 left-0 p-8 sm:p-12 w-full">
+              <div className="flex items-center gap-3 mb-4">
+                <Badge className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-sm">
+                  {selectedPost?.category}
+                </Badge>
+                <span className="text-white/80 text-sm font-medium flex items-center gap-1.5 shadow-sm">
+                  <Calendar className="w-4 h-4" />
+                  {selectedPost?.date}
+                </span>
+              </div>
+              <DialogTitle className="text-2xl sm:text-4xl font-black text-white leading-tight">
+                {selectedPost?.title}
+              </DialogTitle>
+            </div>
           </div>
 
-          <div className="prose prose-orange max-w-none text-gray-700 space-y-6">
-            {selectedPost?.body.split('\n').map((line: string, index: number) => {
-              const trimmedLine = line.trim();
-              if (trimmedLine.startsWith('###')) {
-                return (
-                  <h3 key={index} className="text-xl sm:text-2xl font-bold text-gray-900 mt-8 mb-4 border-b pb-2 border-orange-100">
-                    {trimmedLine.replace('###', '').trim()}
-                  </h3>
-                );
-              }
-              if (trimmedLine.startsWith('-')) {
-                return (
-                  <div key={index} className="flex items-start space-x-3 ml-4">
-                    <span className="mt-2 w-1.5 h-1.5 bg-orange-500 rounded-full flex-shrink-0" />
-                    <p className="text-gray-700 leading-relaxed">
-                      {trimmedLine.replace('-', '').trim()}
+          {/* Article Body */}
+          <div className="p-8 sm:p-12 pb-16 bg-white">
+            <DialogDescription className="text-xl text-orange-600 font-semibold italic mb-10 leading-relaxed border-l-4 border-orange-500 pl-6 bg-orange-50 py-4 pr-4 rounded-r-2xl">
+              {selectedPost?.excerpt}
+            </DialogDescription>
+
+            <div className="prose prose-lg prose-orange max-w-none text-gray-700 space-y-6">
+              {selectedPost?.body.split('\n').map((line: string, index: number) => {
+                const trimmedLine = line.trim();
+                if (trimmedLine.startsWith('###')) {
+                  return (
+                    <h3 key={index} className="text-2xl sm:text-3xl font-black text-gray-900 mt-12 mb-6 tracking-tight flex items-center gap-3">
+                      <span className="w-8 h-1 bg-orange-500 rounded-full inline-block" />
+                      {trimmedLine.replace('###', '').trim()}
+                    </h3>
+                  );
+                }
+                if (trimmedLine.startsWith('-')) {
+                  return (
+                    <div key={index} className="flex items-start gap-4 ml-6 mb-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                      <CheckCircle2 className="mt-1 w-5 h-5 text-orange-500 flex-shrink-0" />
+                      <p className="text-gray-700 leading-relaxed m-0 font-medium">
+                        {trimmedLine.replace('-', '').trim()}
+                      </p>
+                    </div>
+                  );
+                }
+                if (trimmedLine.startsWith('*')) {
+                  return (
+                    <p key={index} className="italic text-gray-600 p-6 rounded-2xl bg-gray-50 border border-gray-200 my-8 text-center shadow-sm">
+                      {trimmedLine.replace(/\*/g, '').trim()}
                     </p>
-                  </div>
-                );
-              }
-              if (trimmedLine.startsWith('*')) {
+                  );
+                }
+                if (trimmedLine === '') {
+                  return <div key={index} className="h-4" />;
+                }
+
+                // Handle bold text **...**
+                const parts = trimmedLine.split(/(\*\*.*?\*\*)/g);
                 return (
-                  <p key={index} className="italic text-orange-700 bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500 my-4">
-                    {trimmedLine.replace(/\*/g, '').trim()}
+                  <p key={index} className="leading-relaxed text-lg text-gray-600">
+                    {parts.map((part, i) => {
+                      if (part.startsWith('**') && part.endsWith('**')) {
+                        return <strong key={i} className="text-gray-900 font-bold bg-orange-50 px-1 rounded">{part.slice(2, -2)}</strong>;
+                      }
+                      return part;
+                    })}
                   </p>
                 );
-              }
-              if (trimmedLine === '') {
-                return <div key={index} className="h-2" />;
-              }
-
-              // Handle bold text **...**
-              const parts = trimmedLine.split(/(\*\*.*?\*\*)/g);
-              return (
-                <p key={index} className="leading-relaxed text-lg">
-                  {parts.map((part, i) => {
-                    if (part.startsWith('**') && part.endsWith('**')) {
-                      return <strong key={i} className="text-gray-900 font-bold">{part.slice(2, -2)}</strong>;
-                    }
-                    return part;
-                  })}
-                </p>
-              );
-            }) || (
-                <p>
-                  {language === "fr"
-                    ? "L'article complet arrive bientôt. Restez connectés pour découvrir nos prochains conseils d'experts sur l'automatisation."
-                    : "The full article is coming soon. Stay tuned to discover our next expert tips on automation."}
-                </p>
-              )}
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
-            <div className="flex items-center space-x-2">
-              <User className="w-4 h-4" />
-              <span>{selectedPost?.author}</span>
+              }) || (
+                  <p>
+                    {language === "fr"
+                      ? "L'article complet arrive bientôt. Restez connectés pour découvrir nos prochains conseils d'experts sur l'automatisation."
+                      : "The full article is coming soon. Stay tuned to discover our next expert tips on automation."}
+                  </p>
+                )}
             </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="w-4 h-4" />
-              <span>{selectedPost?.readTime} {t.readTime}</span>
+
+            {/* Author Footer */}
+            <div className="mt-16 p-8 bg-gray-50 rounded-3xl border border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white shadow-lg text-2xl font-bold">
+                  {selectedPost?.author.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 font-medium">{t.author}</p>
+                  <p className="text-xl font-bold text-gray-900">{selectedPost?.author}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-sm border border-gray-200">
+                <Clock className="w-5 h-5 text-orange-500" />
+                <span className="font-bold text-gray-700">{selectedPost?.readTime} {t.readTime}</span>
+              </div>
             </div>
           </div>
         </DialogContent>

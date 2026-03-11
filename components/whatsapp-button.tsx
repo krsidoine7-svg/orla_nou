@@ -9,8 +9,8 @@ export function WhatsAppButton() {
 
     const phoneNumber = "2250503681588"
     const message = language === "fr"
-        ? "Bonjour Chris&co, je souhaiterais avoir des informations sur vos services d'automatisation."
-        : "Hello Chris&co, I would like to have information about your automation services."
+        ? "Bonjour Orlan-ou, je vous contacte depuis votre site web et je souhaiterais avoir des informations sur vos services."
+        : "Hello Orlan-ou, I am contacting you from your website and I would like to have information about your services."
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 

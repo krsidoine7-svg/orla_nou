@@ -65,13 +65,7 @@ export function Services() {
       features: t.services.items.email.features,
       color: "from-violet-500 to-purple-500",
     },
-    {
-      icon: Search,
-      title: t.services.items.scraping.title,
-      description: t.services.items.scraping.description,
-      features: t.services.items.scraping.features,
-      color: "from-teal-500 to-green-500",
-    },
+
     {
       icon: Settings,
       title: t.services.items.custom.title,

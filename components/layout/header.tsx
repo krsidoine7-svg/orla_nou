@@ -48,15 +48,11 @@ export function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">C&C</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                Chris&co
-              </h1>
-              <p className="text-xs text-gray-600">{t.tagline}</p>
-            </div>
+            <img
+              src="/automatisation%20image/Fichier%204Orlanou.webp"
+              alt="Orlan-ou Logo"
+              className="h-6 md:h-7 w-auto object-contain"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -65,7 +61,7 @@ export function Header() {
               <motion.a
                 key={item.key}
                 href={item.href}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium"
+                className="text-white hover:text-pink-400 transition-colors duration-200 font-medium"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -114,7 +110,7 @@ export function Header() {
                   <a
                     key={item.key}
                     href={item.href}
-                    className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium py-2"
+                    className="text-white hover:text-pink-400 transition-colors duration-200 font-medium py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t.nav[item.key]}
