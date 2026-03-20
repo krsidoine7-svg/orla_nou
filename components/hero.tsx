@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Play, ArrowRight, MessageCircle } from "lucide-react"
+import { ArrowRight, MessageCircle } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
 import { useEffect, useRef } from "react"
@@ -160,19 +160,6 @@ export function Hero() {
             </svg>
             <span className="relative">WhatsApp</span>
             <ArrowRight className="relative w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
-
-          {/* Demo - secondary */}
-          <motion.button
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
-            className="group flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-white border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
-          >
-            <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center transition-colors">
-              <Play className="w-3.5 h-3.5 fill-white" />
-            </div>
-            {t.cta.watchDemo}
           </motion.button>
         </motion.div>
 

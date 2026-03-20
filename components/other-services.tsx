@@ -16,7 +16,7 @@ export function OtherServices() {
                 {
                     name: "Ofika",
                     description: "Solution avancée de carte de visite numérique. Créez votre page publique, partagez vos coordonnées via QR code ou technologie NFC instantanément.",
-                    url: "https://ofika.vercel.app/",
+                    url: "https://ofika.ci",
                     icon: Sparkles,
                     color: "from-purple-500 to-indigo-500",
                     features: ["Technologie NFC", "QR Code", "Page Publique", "Partage Instantané"]
@@ -48,7 +48,7 @@ export function OtherServices() {
                 {
                     name: "Ofika",
                     description: "Advanced digital business card solution. Create your public page and share your contact info via QR code or NFC technology instantly.",
-                    url: "https://ofika.vercel.app/",
+                    url: "https://ofika.ci",
                     icon: Sparkles,
                     color: "from-purple-500 to-indigo-500",
                     features: ["NFC Technology", "QR Code", "Public Page", "Instant Sharing"]

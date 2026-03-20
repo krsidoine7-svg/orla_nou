@@ -91,7 +91,7 @@ export const translations = {
     },
     cta: {
       getStarted: "Commencer maintenant",
-      watchDemo: "Voir la démo",
+
       contact: "Nous contacter",
       learnMore: "En savoir plus",
       getQuote: "Obtenir un devis",
@@ -196,7 +196,7 @@ export const translations = {
     },
     cta: {
       getStarted: "Get Started Now",
-      watchDemo: "Watch Demo",
+
       contact: "Contact Us",
       learnMore: "Learn More",
       getQuote: "Get Quote",
